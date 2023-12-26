@@ -1,5 +1,6 @@
 package com.zhengjun.springbootproject01;
 
+import com.zhengjun.springbootproject01.ServiceImpliment.ServiceInterfaceImpliment;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -14,9 +15,8 @@ public class HelloControllerTest {
 
     @Test
     public void hello()throws  Exception{
-//        mockMvc.perform(MockMvcRequestBuilders.post("/hello").
-//                contentType(MediaType.APPLICATION_JSON)).
-//                andExpect().andDo();
+        ServiceInterfaceImpliment impl=new ServiceInterfaceImpliment();
+        impl.queryAllPersons();
 
     }
 
